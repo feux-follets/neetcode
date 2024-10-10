@@ -1,0 +1,13 @@
+| Problem                                                                                                                       | Solution                                                 | Difficulty |
+|-------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|------------|
+| [Unique Paths](https://leetcode.com/problems/unique-paths/)                                                                   | [C++](unique_paths.cpp)                                  | Medium     |
+| [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)                                       | [C++](longest_common_subsequence.cpp)                    | Medium     |
+| [Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/) | [C++](best_time_to_buy_and_sell_stock_with_cooldown.cpp) | Medium     |
+| [Coin Change II](https://leetcode.com/problems/coin-change-ii/)                                                               | [C++](coin_change_ii.cpp)                                | Medium     |
+| [Target Sum](https://leetcode.com/problems/target-sum/)                                                                       | [C++](target_sum.cpp)                                    | Medium     |
+| [Interleaving String](https://leetcode.com/problems/interleaving-string/)                                                     | [C++](interleaving_string.cpp)                           | Medium     |
+| [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)                     | [C++](longest_increasing_path_in_a_matrix.cpp)           | Hard       |
+| [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/)                                                 | [C++](distinct_subsequences.cpp)                         | Hard       |
+| [Edit Distance](https://leetcode.com/problems/edit-distance/)                                                                 | [C++](edit_distance.cpp)                                 | Medium     |
+| [Burst Balloons](https://leetcode.com/problems/burst-balloons/)                                                               | [C++](burst_balloons.cpp)                                | Hard       |
+| [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)                                     | [C++](regular_expression_matching.cpp)                   | Hard       |
