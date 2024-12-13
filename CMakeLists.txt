@@ -1,12 +1,11 @@
-cmake_minimum_required(VERSION 3.30)
+cmake_minimum_required(VERSION 4.0)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_COMPILE_WARNING_AS_ERROR OFF)
 set(CMAKE_COLOR_DIAGNOSTICS ON)
-
-include(StdModule.cmake)
+# set(CMAKE_CXX_CLANG_TIDY clang-tidy)
 
 
 set(WARNINGS
@@ -19,6 +18,10 @@ set(WARNINGS
 )
 add_compile_options(${WARNINGS})
 
+if (APPLE)
+	set(CMAKE_OSX_SYSROOT /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk)
+endif ()
+
 
 project(neetcode CXX)
-add_library(solution solution.cpp)
+add_subdirectory(cpp)
