@@ -1,5 +1,5 @@
 # Import std modules
-set(CMAKE_EXPERIMENTAL_CXX_IMPORT_STD "0e5b6991-d74f-4b3d-a41c-cf096e0b2508")
+set(CMAKE_EXPERIMENTAL_CXX_IMPORT_STD "d0edc3af-4c50-42ea-a356-e2862fe7a444")
 set(CMAKE_CXX_MODULE_STD ON)
 
 if (APPLE)
@@ -13,6 +13,7 @@ set(SYSTEM_SHARE_DIR "${SYSTEM_DIR}/share")
 set(SYSTEM_STD_MODULE_DIR "${SYSTEM_SHARE_DIR}/libc++/v1")
 
 if (APPLE)
+	set(CMAKE_OSX_SYSROOT /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk)
 	add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-nostdinc++>)
 	add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-isystem${SYSTEM_INCLUDE_DIR}/c++/v1>)
 	add_link_options($<$<COMPILE_LANGUAGE:CXX>:-nostdlib++>)
@@ -22,12 +23,3 @@ if (APPLE)
 elseif (UNIX)
 	set(CMAKE_CXX_FLAGS "-stdlib=libc++")
 endif ()
-
-
-# Intellisense
-add_library(unused_std_target STATIC)
-target_sources(unused_std_target
-		PRIVATE
-		FILE_SET CXX_MODULES
-		BASE_DIRS ${SYSTEM_STD_MODULE_DIR}
-		FILES ${SYSTEM_STD_MODULE_DIR}/std.cppm ${SYSTEM_STD_MODULE_DIR}/std.compat.cppm)
